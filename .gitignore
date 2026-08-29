@@ -1,0 +1,67 @@
+## .gitignore for ASP.NET Core with SQL Server
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options 
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.pidb
+*.scc
+*.csproj.user
+
+# NuGet Packages
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+
+# SQL Server & Database Files (LocalDB, MDF, LDF, SQLite)
+*.mdf
+*.ldf
+*.ndf
+*.sdf
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+App_Data/*.mdf
+App_Data/*.ldf
+
+# Secrets and Connection Strings
+secrets.json
+appsettings.local.json
+*.pfx
+*.p12
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IIS Logs
+*.log
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*   
