@@ -19,11 +19,12 @@ namespace SessionDemo1.Controllers
                 HttpContext.Session.SetString("Name", name);
                 return RedirectToAction("Success");
             }
+            return View();
         }
 
         public IActionResult Success()
         {
-            ViewBag["Name"]=HttpContext.Session.GetString("Name");
+            ViewData["Name"]=HttpContext.Session.GetString("Name");
             return View();
         }
 
