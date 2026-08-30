@@ -28,6 +28,13 @@ namespace SessionDemo1.Controllers
             return View();
         }
 
+        public IActionResult AboutUs()
+        {
+            ViewData["Name"] = HttpContext.Session.GetString("Name");
+            return View(); 
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
