@@ -11,6 +11,22 @@ namespace SessionDemo1.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Index(string? name)
+        {
+            if (name != null)
+            {
+                HttpContext.Session.SetString("Name", name);
+                return RedirectToAction("Success");
+            }
+        }
+
+        public IActionResult Success()
+        {
+            ViewBag["Name"]=HttpContext.Session.GetString("Name");
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
