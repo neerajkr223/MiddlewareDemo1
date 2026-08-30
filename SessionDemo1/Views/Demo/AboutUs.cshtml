@@ -1,0 +1,8 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+
+@{
+    var name = Accessor.HttpContext?.Session?.GetString("Name");
+}
+
+<h1>Welcome Mr.@name !</h1>   

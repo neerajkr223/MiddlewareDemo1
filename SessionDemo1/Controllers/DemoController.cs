@@ -9,5 +9,9 @@ namespace SessionDemo1.Controllers
             ViewData["Name"] = HttpContext.Session.GetString("Name");
             return View();
         }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
     }
 }
