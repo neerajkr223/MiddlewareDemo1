@@ -37,6 +37,7 @@ namespace SessionDemo1.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["Name"] = HttpContext.Session.GetString("Name");
             return View();
         }
 
